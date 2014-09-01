@@ -1879,7 +1879,7 @@ for current layout."
            (select-window (display-buffer (ad-get-arg 0)
                                           (ad-get-arg 1)))
            ;; TODO: Klaus Berndl <klaus.berndl@sdm.de>: Do we need this?!
-           (set-buffer (ad-get-arg 0))
+           (setq ad-return-value (set-buffer (ad-get-arg 0)))
            (if (ad-get-arg 2)
                ;; not the best solution but for now....
                (bury-buffer (ad-get-arg 0))))
